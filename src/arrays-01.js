@@ -26,6 +26,7 @@
  */
 function getFirstValue(arr) {
   // write your code here & return value
+  return arr[0];
 }
 
 /**
@@ -38,6 +39,7 @@ function getFirstValue(arr) {
  */
 function makeArray(a, b, c, d) {
   // write your code here & return value
+  return [a, b, c, d];
 }
 
 /**
@@ -49,6 +51,7 @@ function makeArray(a, b, c, d) {
  */
 function createFirstFivePrimes() {
   // write your code here & return value
+  return [2, 3, 5, 7, 11];
 }
 /**
  * Creates a new array with a number of elements
@@ -60,6 +63,11 @@ function createFirstFivePrimes() {
  */
 function createSizedArray(size) {
   // write your code here & return value
+  const arr = [];
+  for (let i = 0; i < size; i++) {
+    arr.push(i);
+  }
+  return arr;
 }
 
 /**
@@ -71,6 +79,9 @@ function createSizedArray(size) {
  */
 function modifyArrayByAdding(arr) {
   // write your code here & return value
+  arr.unshift(1);
+  arr.push(1);
+  return arr;
 }
 
 /**
@@ -81,6 +92,9 @@ function modifyArrayByAdding(arr) {
  */
 function modifyArrayByDeleting(arr) {
   // write your code here & return value
+  arr.pop();
+  arr.shift();
+  return arr;
 }
 
 /**
@@ -92,6 +106,7 @@ function modifyArrayByDeleting(arr) {
  */
 function findElementAtIndex(arr, index) {
   // write your code here & return value
+  return arr[index];
 }
 
 /**
@@ -104,6 +119,7 @@ function findElementAtIndex(arr, index) {
  */
 function findElementByValue(arr, value) {
   // write your code here & return value
+  return arr.findIndex((e) => e === value);
 }
 
 /**
@@ -116,6 +132,8 @@ function findElementByValue(arr, value) {
  */
 function changeElementAtIndex(arr, index, value) {
   // write your code here & return value
+  arr[index] = value;
+  return arr;
 }
 
 /**
@@ -127,6 +145,11 @@ function changeElementAtIndex(arr, index, value) {
  */
 function makeStringFromArray(arr) {
   // write your code here & return value
+  let str = '';
+  arr.forEach((e) => {
+    str += e;
+  });
+  return str;
 }
 
 /**
@@ -138,6 +161,7 @@ function makeStringFromArray(arr) {
  */
 function createShallowCopy(arr) {
   // write your code here & return value
+  return [...arr];
 }
 
 module.exports = {
